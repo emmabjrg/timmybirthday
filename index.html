@@ -14,7 +14,7 @@
     </div>
 
     <!-- Button to start audio playback -->
-    <button id="play-audio">Play Music</button>
+    <button id="play-audio">&#128266;</button>
 
     <!-- Audio element for background music -->
     <audio id="background-audio" loop>
@@ -36,10 +36,12 @@
         audio.play();
       }
 
-      window.addEventListener("load", () => {
+      // Play audio when button is clicked
+      playButton.addEventListener("click", () => {
         audio.play();
         localStorage.setItem("audioPlaying", true);
       });
+
       // Save current time periodically
       audio.addEventListener("timeupdate", () => {
         localStorage.setItem("audioTime", audio.currentTime);

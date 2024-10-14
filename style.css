@@ -127,10 +127,10 @@ p {
     }
 }
  #play-audio {
-    color: #B7F2FF;
-    background-color: #B7F2FF;
-    cursor:default;
-
+    background-color:transparent;
+    position: absolute;
+    top: 4px;
+    left: -70px;
  }
 
  #back {
