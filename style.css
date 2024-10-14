@@ -126,3 +126,9 @@ p {
         margin: 5vw 0;
     }
 }
+ #play-audio {
+    color: #B7F2FF;
+    background-color: #B7F2FF;
+    cursor:default;
+
+ }
