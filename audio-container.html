@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIMMYS BIRTHDAY - Audio Container</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      #content {
+        height: 100vh;
+        width: 100vw;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Audio iframe that will persist across page changes -->
+    <iframe src="audio.html" style="display: none"></iframe>
+
+    <!-- Main content iframe -->
+    <iframe id="content" src="index.html"></iframe>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    background-color: #B7F2FF;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive Typography */
+h1 {
+    color: #D62612;
+    font-size: 8vw; /* Responsive font size */
+    text-align: center;
+    margin: 0;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #D62612;
+    font-size: 10vw; /* Responsive font size */
+    text-align: center;
+    animation: colorChange 5s infinite alternate;
+    margin: 0;
+}
+
+/* Adjustments for specific element positioning */
+#timmy {
+    margin-top: -2vw; /* Slight margin adjustment */
+}
+
+@keyframes colorChange {
+    0% { color: #8c00fc; }
+    20% { color: #3500ff; }
+    40% { color: #01fe01; }
+    60% { color: #fffe37; }
+    80% { color: #ff8600; }
+    100% { color: #D62612; }
+}
+
+/* Button Styles */
+#btn {
+    display: flex;
+    justify-content: center;
+    margin: 3vw 0; /* Responsive vertical margin */
+}
+
+button {
+    color: white;
+    font-size: 6vw; /* Responsive font size */
+    border-radius: 50px;
+    border: none;
+    background-color: #00966E;
+    padding: 1vw 8vw; /* Responsive padding */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D62612;
+    transition: ease-in-out 0.3s;
+}
+
+/* Image and Text After */
+#billedesite img {
+    width: 100%;
+    height: auto;
+}
+
+#text_after {
+    text-align: center;
+    margin-top: -2vw; /* Fine-tuned margin for spacing */
+}
+
+p {
+    text-align: center;
+    color: #00966E;
+    font-size: 4vw; /* Responsive font size */
+    margin: 2vw 0; /* Spacing to balance text */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 10vw;
+        padding-top: 10px;
+    }
+
+    h2 {
+        font-size: 12vw;
+    }
+
+    #btn {
+        margin-top: -3vw; /* Adjust button margin on mobile */
+    }
+
+    button {
+        font-size: 7vw;
+        padding: 3vw 12vw;
+    }
+
+    #text_after {
+        margin-top: -10vw;
+    }
+
+    p {
+        font-size: 5vw;
+        margin: 4vw 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 12vw;
+        padding-top: 5px;
+    }
+
+    h2 {
+        font-size: 15vw;
+    }
+
+    button {
+        font-size: 8vw;
+        padding: 4vw 15vw;
+    }
+
+    p {
+        font-size: 6vw;
+        margin: 5vw 0;
+    }
+}

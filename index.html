@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TIMMYS BIRTHDAY</title>
+  </head>
+  <body>
+    <h1>HAPPY BIRTHDAY</h1>
+    <h2 id="timmy">TIMMY!!!!!</h2>
+    <div id="btn">
+      <a href="billede.html"><button>CLICK ME!!!!</button></a>
+    </div>
+
+    <!-- Button to start audio playback -->
+    <button id="play-audio">Play Music</button>
+
+    <!-- Audio element for background music -->
+    <audio id="background-audio" loop>
+      <source src="nationalanthem.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript for managing audio state -->
+    <script>
+      const audio = document.getElementById("background-audio");
+      const playButton = document.getElementById("play-audio");
+
+      // Retrieve saved time and play status
+      const savedTime = localStorage.getItem("audioTime") || 0;
+      const isPlaying = localStorage.getItem("audioPlaying") === "true";
+
+      // Set saved time and play status
+      audio.currentTime = savedTime;
+      if (isPlaying) {
+        audio.play();
+      }
+
+      // Play audio when button is clicked
+      playButton.addEventListener("click", () => {
+        audio.play();
+        localStorage.setItem("audioPlaying", true);
+      });
+
+      // Save current time periodically
+      audio.addEventListener("timeupdate", () => {
+        localStorage.setItem("audioTime", audio.currentTime);
+      });
+
+      // Save play status
+      audio.addEventListener("play", () => {
+        localStorage.setItem("audioPlaying", true);
+      });
+      audio.addEventListener("pause", () => {
+        localStorage.setItem("audioPlaying", false);
+      });
+    </script>
+  </body>
+</html>

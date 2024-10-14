@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>WE ARE GOING TO BULGARIA</title>
+  </head>
+  <body>
+    <img
+      src="fullscreen_image_bulgaria.png"
+      alt="Background Image"
+      width="100%"
+    />
+    <div id="text_after">
+      <h2 id="yup">YUP!!!!</h2>
+      <h1 id="weare">WE ARE GOING TO BULGARIA</h1>
+      <p>sometime next summer ...</p>
+    </div>
+
+    <!-- Audio element for background music -->
+    <audio id="background-audio" loop>
+      <source src="nationalanthem.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript for managing audio state -->
+    <script>
+      const audio = document.getElementById("background-audio");
+      const savedTime = localStorage.getItem("audioTime") || 0;
+      const isPlaying = localStorage.getItem("audioPlaying") === "true";
+
+      // Set the saved time and play status
+      audio.currentTime = savedTime;
+      if (isPlaying) {
+        audio.play();
+      }
+
+      // Update localStorage with audio's current time
+      audio.addEventListener("timeupdate", () => {
+        localStorage.setItem("audioTime", audio.currentTime);
+      });
+
+      // Update play status in localStorage
+      audio.addEventListener("play", () => {
+        localStorage.setItem("audioPlaying", true);
+      });
+      audio.addEventListener("pause", () => {
+        localStorage.setItem("audioPlaying", false);
+      });
+    </script>
+  </body>
+</html>
