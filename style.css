@@ -117,7 +117,11 @@ p {
 }
 
 @media (max-width: 480px) {
+    img {
+        margin-bottom: 15%;
+    }
     h1 {
+        margin-top: 15%;
         font-size: 12vw;
         padding-top: 5px;
     }
@@ -129,7 +133,7 @@ p {
     button {
         font-size: 8vw;
         padding: 4vw 15vw;
-    }
+        margin-top: 10%;    }
 
     p {
         font-size: 6vw;
