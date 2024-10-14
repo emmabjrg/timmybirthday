@@ -3,12 +3,20 @@ body {
     background-color: #B7F2FF;
     padding: 0;
     margin: 0;
+    font-family: 'Londrina Solid', sans-serif;
+
 }
+
+main {
+    padding-top: 4%;
+}
+
+
 
 /* Responsive Typography */
 h1 {
     color: #D62612;
-    font-size: 8vw; /* Responsive font size */
+    font-size: 7vw; /* Responsive font size */
     text-align: center;
     margin: 0;
     padding-top: 20px;
@@ -41,6 +49,7 @@ h2 {
     display: flex;
     justify-content: center;
     margin: 3vw 0; /* Responsive vertical margin */
+    
 }
 
 button {
@@ -49,8 +58,10 @@ button {
     border-radius: 50px;
     border: none;
     background-color: #00966E;
-    padding: 1vw 8vw; /* Responsive padding */
+    padding: 1vw 6vw; /* Responsive padding */
     cursor: pointer;
+    font-family: 'Londrina Solid', sans-serif;
+
 }
 
 button:hover {
@@ -66,7 +77,6 @@ button:hover {
 
 #text_after {
     text-align: center;
-    margin-top: -2vw; /* Fine-tuned margin for spacing */
 }
 
 p {
@@ -130,7 +140,7 @@ p {
     background-color:transparent;
     position: absolute;
     top: 4px;
-    left: ;
+    left: 2px;
     padding: 0;
     margin: 0;
  }
@@ -141,4 +151,8 @@ p {
     padding: 10px;
     text-decoration: none;
     text-transform: uppercase;
+ }
+
+ #back:hover {
+    color: #D62612;
  }
